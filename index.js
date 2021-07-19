@@ -19,7 +19,7 @@ function processFirstItem(stringList, callback) {
 console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
 
 // ⭐️ Example Challenge END ⭐️
-
+/*Temporary code for first commit to setup codegrade*/
 
 ///// M V P ///////
 
