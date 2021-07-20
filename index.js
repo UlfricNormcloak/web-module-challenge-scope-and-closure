@@ -32,10 +32,12 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   2. Which of the two uses a closure? How can you tell?
 
-  The first counter contains the closure. You can see the closure with the invocation of counterMaker at the point that counter1 is declared, following the function code block.
+  The closure occurs in the first code block, when the function - counter() - reaches out of its function scope to the scope of the parent function to access the variable - let count = 0;
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+     The first code block would be beneficial in an instance when memory of the count is needed to keep a running total. 
 */
 
 // counter1 code
@@ -84,16 +86,23 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(inningcb, number){
-  /*Code Here*/
+function finalScore(inningcb, numberOfInnings){
+  let Home = 0;
+  let Away = 0;
+  for (i = 0; i < numberOfInnings; i++){
+    Home.inningcb * numberOfInnings;
+    Away.inningcb * numberOfInnings;
+  } return finalScore ()
 }
+
+console.log(finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
+function getInningScore(inningcb) {
   /*Your Code Here */
 }
 

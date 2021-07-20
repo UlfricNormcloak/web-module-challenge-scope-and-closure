@@ -59,6 +59,9 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure is a case where a function reaches outside of itself (toward an outer scope, but not inward to a nested function) to an outer function or variable. The function 'looks' outward to complete the code. 
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,9 +83,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+In the anonymous function 'name' is referenced in the string in the console.log. When the variables dansRoll and zoesRoll are declared and the arguments are passed, the console.log within the inner function calls it parent or outer function. 
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+dansRoll will produce a string with the name "Dan" and a random generated number between 1 and 6. The argument "Dan" will stay the same because it is a const and cannot be redeclared, but the number can changed every time the function runs. The roll can come up different.
+
 c. What is the lexical scope of `newRoll`? 
 
+newRoll is function scoped to the function it lives within.
 
 ### Task 3 - Stretch Goals
 
