@@ -37,7 +37,7 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
 
-     The first code block would be beneficial in an instance when memory of the count is needed to keep a running total. 
+     The first code block would be beneficial in an instance if you want to use code on multiple 
 */
 
 // counter1 code
@@ -87,12 +87,15 @@ Use the finalScore function below to do the following:
 */ 
 
 function finalScore(inningcb, numberOfInnings){
-  let Home = 0;
-  let Away = 0;
-  for (i = 0; i < numberOfInnings; i++){
-    Home.inningcb * numberOfInnings;
-    Away.inningcb * numberOfInnings;
-  } return finalScore ()
+  const currentScore = {
+  'Home': 0,
+  'Away': 0
+  };
+  for (let i = 0; i < numberOfInnings; i++){
+    currentScore.Home += inningcb();
+    currentScore.Away += inningcb();
+  } 
+  return currentScore
 }
 
 console.log(finalScore(inning, 9));
@@ -103,9 +106,13 @@ Use the getInningScore() function below to do the following:
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
 function getInningScore(inningcb) {
-  /*Your Code Here */
+      return {
+        'Home': inningcb(),
+        'Away': inningcb()
+      }
 }
 
+console.log(getInningScore(inning));
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
